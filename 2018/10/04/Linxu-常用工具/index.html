@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Linux," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="LYZ" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="Linux下的常用工具 我在这里找到了一个linux命令查询的网站：http://man.linuxde.net/  编辑器   编辑器 特点     ed 行编辑器使用起来很不方便，每次只能对一行进行操作   pico pico很象DOS下的edit程序，打开之后，屏幕下方有操作的提示信息，功能简单，也可以完成操作，一步一步做就可以了。pico的功能键直接列在屏幕的最下方，可以做为帮助来指导操">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linxu_常用工具">
+<meta property="og:url" content="http://yoursite.com/2018/10/04/Linxu-常用工具/index.html">
+<meta property="og:site_name" content="LYZ">
+<meta property="og:description" content="Linux下的常用工具 我在这里找到了一个linux命令查询的网站：http://man.linuxde.net/  编辑器   编辑器 特点     ed 行编辑器使用起来很不方便，每次只能对一行进行操作   pico pico很象DOS下的edit程序，打开之后，屏幕下方有操作的提示信息，功能简单，也可以完成操作，一步一步做就可以了。pico的功能键直接列在屏幕的最下方，可以做为帮助来指导操">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/img/Linux_CT/1.jpg">
+<meta property="og:updated_time" content="2018-10-04T13:01:54.936Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linxu_常用工具">
+<meta name="twitter:description" content="Linux下的常用工具 我在这里找到了一个linux命令查询的网站：http://man.linuxde.net/  编辑器   编辑器 特点     ed 行编辑器使用起来很不方便，每次只能对一行进行操作   pico pico很象DOS下的edit程序，打开之后，屏幕下方有操作的提示信息，功能简单，也可以完成操作，一步一步做就可以了。pico的功能键直接列在屏幕的最下方，可以做为帮助来指导操">
+<meta name="twitter:image" content="http://yoursite.com/img/Linux_CT/1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/10/04/Linxu-常用工具/"/>
+
+
+
+
+
+  <title>Linxu_常用工具 | LYZ</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+	<a href="https://sveter.github.io/">
+	<img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png" alt="Fork me on GitHub">
+	</a>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">LYZ</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/04/Linxu-常用工具/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李煜哲">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/lyz.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LYZ">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Linxu_常用工具</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-04T21:00:45+08:00">
+                2018-10-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/10/04/Linxu-常用工具/" class="leancloud_visitors" data-flag-title="Linxu_常用工具">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.5k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  9
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <a id="more"></a>
+<h3 id="Linux下的常用工具"><a href="#Linux下的常用工具" class="headerlink" title="Linux下的常用工具"></a>Linux下的常用工具</h3><blockquote>
+<p>我在这里找到了一个linux命令查询的网站：<a href="http://man.linuxde.net/" target="_blank" rel="noopener">http://man.linuxde.net/</a></p>
+</blockquote>
+<h4 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h4><table>
+<thead>
+<tr>
+<th>编辑器</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ed</td>
+<td>行编辑器使用起来很不方便，每次只能对一行进行操作</td>
+</tr>
+<tr>
+<td>pico</td>
+<td>pico很象DOS下的edit程序，打开之后，屏幕下方有操作的提示信息，功能简单，也可以完成操作，一步一步做就可以了。pico的功能键直接列在屏幕的最下方，可以做为帮助来指导操作。</td>
+</tr>
+<tr>
+<td>emacs</td>
+<td>可以在emacs中进行文本编辑，也可以编写程序代码，做程序调试，编辑HTML/SGML，读News，收发e-mail…，而且emacs经过配置后还支持中文。强大往往意味着操作方法的复杂，emacs也是如此，必须记非常多的命令才能使用它。</td>
+</tr>
+<tr>
+<td>vi/vim</td>
+<td>vim与vi相比，增加了更多的特性，如彩色与高亮显示，可以使我们的编辑工作更轻松。</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>我们主要对vim进行学习</p>
+</blockquote>
+<h6 id="vim的基本概念"><a href="#vim的基本概念" class="headerlink" title="vim的基本概念"></a>vim的基本概念</h6><blockquote>
+<p>vim 有12种模式，每一种模式都有不同的功能，不同的模式做不同的操作</p>
+<p>我们主要掌握三种模式：普通模式、插入模式、底行模式（视图模式、替换模式）</p>
+</blockquote>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 三种模式</li>
+</ul>
+<h6 id="vim操作"><a href="#vim操作" class="headerlink" title="vim操作"></a>vim操作</h6><ul>
+<li style="list-style: none"><input type="checkbox"> 从普通模式切换到插入模式的方法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">      i：从光标所在位置开始插入</span><br><span class="line">a：从光标所在位置的下一个字符开始插入</span><br><span class="line">I：将光标移动到行首，然后进入插入模式</span><br><span class="line">A：将光标移动到行尾，然后进入插入模式</span><br><span class="line">o：将光标所在行的下方，新建一行，进入插入模式</span><br><span class="line">O：将光标所在行的上方，新建一行，进入插入模式</span><br><span class="line">s：删除光标所在字符，然后进入插入模式</span><br></pre></td></tr></table></figure>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 从普通模式切换到底行模式</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">      &apos;shift&apos; +  &apos;:&apos;   w保存，q退出，q!强制退出(不保存本次修改)，wq保存并退出</span><br><span class="line">!pwd 临时执行命令，按回车返回vim</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>[ ] 从插入模式/底行模式返回普通模式: ==ESC==</p>
+</li>
+<li><p>[ ] 普通模式下的操作</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">      h：向左移动光标</span><br><span class="line">j：向下移动光标</span><br><span class="line">k：向上移动光标</span><br><span class="line">l：向右移动光标</span><br><span class="line">      w：光标向右移动一个单词</span><br><span class="line">b：光标向左移动一个单词</span><br><span class="line">   yy：复制光标所在行</span><br><span class="line">   nyy：从光标所在行开始向下复制n行</span><br><span class="line">p：向光标所在行下方粘贴</span><br><span class="line">P：向光标所在行上方粘贴</span><br><span class="line">   dd：删除光标所在行（vim中删除其实是剪贴）</span><br><span class="line">      ndd：从光标所在行开始向下删除n行</span><br><span class="line">x：删除光标所在字符</span><br><span class="line">   dw：删除光标所在位置开始的一个单词</span><br><span class="line">u：撤销操作</span><br><span class="line">      Ctrl+r：返回撤销操作</span><br><span class="line">      Ctrl+v：进入列视图模式，可以进行选择操作</span><br><span class="line">v：进入行视图模式</span><br><span class="line">r：替换光标所在字符</span><br><span class="line">R：进入替换模式，对内容一直替换</span><br><span class="line">   gg：光标移动到文档的首行</span><br><span class="line">   G：光标移动到文档的首行</span><br><span class="line">   gg=G：全文缩进对齐</span><br></pre></td></tr></table></figure>
+<ul>
+<li style="list-style: none"><input type="checkbox"> vim的配置</li>
+</ul>
+<blockquote>
+<p>参考链接：<a href="https://www.linuxidc.com/Linux/2016-05/131824.htm" target="_blank" rel="noopener">https://www.linuxidc.com/Linux/2016-05/131824.htm</a></p>
+</blockquote>
+<h4 id="编译器"><a href="#编译器" class="headerlink" title="编译器"></a>编译器</h4><blockquote>
+<p>Linux 下可用的编译器有 GCC、EGCS 和 PGCC，其中最常用的编译器便是 GCC</p>
+</blockquote>
+<h6 id="gcc"><a href="#gcc" class="headerlink" title="gcc"></a>gcc</h6><blockquote>
+<p>linux下程序的执行就是告诉操作系统程序文件在哪个路径下</p>
+<p>gcc是一个编译工具，将我们所写的C语言程序编程成为机器可识别的语言程序</p>
+</blockquote>
+<ul>
+<li style="list-style: none"><input type="checkbox"> gcc常用选项</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">         -o：指定要生成的文件的名称</span><br><span class="line">-E：只预处理</span><br><span class="line">-S：只编译</span><br><span class="line">-c：只汇编</span><br><span class="line">-static 静态链接（默认动态）</span><br></pre></td></tr></table></figure>
+<h6 id="程序的编译过程"><a href="#程序的编译过程" class="headerlink" title="程序的编译过程"></a>程序的编译过程</h6><p>==预处理==–&gt;==编译==–&gt;==汇编==–&gt;==链接==</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">      1. 预处理	gcc -E test.c -o test.i</span><br><span class="line">	去掉注释展开所有代码</span><br><span class="line">2. 编译	gcc -S test.i -o test.s</span><br><span class="line">	先纠错，没有错误则编译成为汇编代码</span><br><span class="line">3. 汇编	gcc -c test.s -o test.o</span><br><span class="line">	将汇编代码生成一个机器可识别代码（汇编只是将我们写的代码编译完毕，但是不能运行，</span><br><span class="line">	因为代码不完全，我们调用的一些库函数，并不知道如何实现，需要经过第四步才能生成可执行程序）</span><br><span class="line">4. 链接	gcc test.o -o test.exe</span><br><span class="line">	将库中的函数链接过来和我们的代码最终合并生成可执行程序</span><br></pre></td></tr></table></figure>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 动态链接和静态链接</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">动态链接：链接的是动态库</span><br><span class="line">静态链接：链接的是静态库</span><br><span class="line">动态链接生成的可执行程序小，静态链接大，但是动态链接生成的程序运行时需要动态库的存在</span><br><span class="line">静态库不需要（因为静态链接就是将库中的函数全部拿过来生成可执行程序了，所以大）</span><br><span class="line">程序的连接方式默认是动态链接</span><br></pre></td></tr></table></figure>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><h6 id="yum"><a href="#yum" class="headerlink" title="yum"></a>yum</h6><blockquote>
+<p>yum是红帽系列linux操作系统进行软件包管理的工具，软件的安装、移除、查看都是通过yum工具完成的</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">      查看：yum list | grep 想要安装的包名字</span><br><span class="line">安装：yum install 想要安装的包名字</span><br><span class="line">移除：yum remove 安装包名字</span><br><span class="line">修改更新yum源的方法</span><br><span class="line">	/etc/yum.repos.d/CentOS-Base.repo</span><br></pre></td></tr></table></figure>
+<h6 id="rpm"><a href="#rpm" class="headerlink" title="rpm"></a>rpm</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">查看：rpm -a | grep &quot;软件或者包的名字&quot;</span><br><span class="line">安装：rpm -i 需要安装的包文件名</span><br><span class="line">升级：rpm -U 需要升级的包</span><br><span class="line">卸载：rpm -e 需要卸载的安装包</span><br><span class="line">卸载之前，通常需要使用rpm -q …命令查出需要卸载的安装包名称</span><br></pre></td></tr></table></figure>
+<h6 id="源码安装"><a href="#源码安装" class="headerlink" title="源码安装"></a>源码安装</h6><blockquote>
+<p>源码安装大致可以分为三步骤： （./configure）–＞ 编译（sudo make） –＞ 安装（sudo make install）</p>
+</blockquote>
+<blockquote>
+<p>1、配置：这是编译源代码的第一步，通过 ./configure 命令完成。<br>         执行此步以便为编译源代码作准备。常用的选项有 –prefix=PREFIX，<br>         用以指定程序的安装位置。更多的选项可通过 –help 查询。也有某些程序无需执行此步。</p>
+<p>2、编译：一旦配置通过，可即刻使用 make 指令来执行源代码的编译过程。<br>         视软件的具体情况而定，编译所需的时间也各 有差异，我们所要做的就是耐心等候和静观其变。<br>         此步虽然仅下简单的指令，但有时候所遇到的问题却十分复杂。<br>         较常碰到的情形是程序编译到中途却无法圆满结 束。<br>         此时，需要根据出错提示分析以便找到应对之策。</p>
+<p>3、安装：如果编译没有问题，那么执行 sudo make install 就可以将程序安装到系统中了。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>安装</th>
+<th>介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rpm</td>
+<td>rpm是由红帽公司开发的软件包管理方式，使用rpm我们可以方便的进行软件的安装、查询、卸载、升级等工作。但是rpm软件包之间的依赖性问题往往会很繁琐,尤其是软件由多个rpm包组成时。</td>
+</tr>
+<tr>
+<td>yum</td>
+<td>Yum（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE中的Shell前端软件包管理器。基於RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软体包，无须繁琐地一次次下载、安装。 </td>
+</tr>
+</tbody>
+</table>
+<h4 id="makefile"><a href="#makefile" class="headerlink" title="makefile"></a>makefile</h4><blockquote>
+<p>在makefile中我们通常定义很多的程序编译规则，在终端命令行下敲击一个make命令，那么这个时候make这个程序，就会跑到当前目录下找寻这个Makefile文件，然后按照makefie中已经规划好的编译顺序以及编译规则来完成整个项目的编译</p>
+</blockquote>
+<ul>
+<li style="list-style: none"><input type="checkbox"> make命令</li>
+</ul>
+<blockquote>
+<p>只在当前目录下找名字为Makefile/makefile的文件</p>
+<p>make可以检测目标对象与依赖对象的时间属性，判断程序是否需要重新编译（一个目标对象是否重新生成）</p>
+<p>永远之找第一个目标对象生成，生成了第一个对象之后就退出了</p>
+<p>make可以指定要生成的对象 ，例如make clean</p>
+</blockquote>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 伪对象</li>
+</ul>
+<blockquote>
+<p>不管是不是最新的都需要重新生成（执行下边的生成命令）</p>
+<p>使用 ==.PHONY== 来声明一个对象是伪对象</p>
+</blockquote>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 变量</li>
+</ul>
+<blockquote>
+<p>预定义变量—Makefile中已经提前定义好的变量</p>
+<p>$@    编写规则中要生成的目标对象</p>
+<p>$^    编写规则中所有的依赖对象</p>
+<p>$&lt;    编写规则中第一个依赖对象</p>
+<p>wildcard关键字用于获取文件名</p>
+<p>a=$(src),变量的使用需要加上一个$符号，否则认为是字符串赋值</p>
+</blockquote>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 如何编写makefile</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">目标对象名称：依赖对象名称</span><br><span class="line">[制表符]通过依赖对象生成目标对象的命令</span><br></pre></td></tr></table></figure>
+<p><img src="/img/Linux_CT/1.jpg" alt="avater"></p>
+<h4 id="gdb使用"><a href="#gdb使用" class="headerlink" title="gdb使用"></a>gdb使用</h4><ul>
+<li style="list-style: none"><input type="checkbox"> gcc -g</li>
+</ul>
+<blockquote>
+<p>gcc -g 选项是开启gdb调试选项，目的是为了在可执行程序中加入调试符号信息</p>
+<p>gdb调试一个程序需要这个程序在编译时加上-g选项来开启调试，为可执行程序加入一些调试符号信息。例如：gcc -g main.c -o main</p>
+</blockquote>
+<ul>
+<li style="list-style: none"><input type="checkbox"> gdb如何加载程序</li>
+</ul>
+<blockquote>
+<p>gdb ./main 或者 gdb进入之后 file ./main</p>
+</blockquote>
+<ul>
+<li style="list-style: none"><input type="checkbox"> gdb常用命令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">            q    	退出</span><br><span class="line">run/r	开始运行程序，程序直接跑起来</span><br><span class="line">		r -l -s -a 程序的参数在这里加载</span><br><span class="line">start	开始逐步调试程序</span><br><span class="line">list/l	查看当前行附近代码</span><br><span class="line">next/n	下一步，不跟踪进入函数</span><br><span class="line">until n	直接运行到第n行</span><br><span class="line">b		添加断点   eg: b main.c:n 给main.c第n行添加断点</span><br><span class="line">					   b n 给当前文件第n行添加断点</span><br><span class="line">					   b func 给函数添加断点</span><br><span class="line">s    	下一步，跟踪进入函数</span><br><span class="line">i 		查看详细信息</span><br><span class="line">		i b	查看当前断点信息</span><br><span class="line">d 		默认删除所有断点</span><br><span class="line">		d n	删除id 为n的断点</span><br><span class="line">p  		打印变量内容（p i(变量)）</span><br><span class="line">watch   变量监控,变量修改后会停下来（watch i(变量)）</span><br><span class="line">c 		继续运行</span><br><span class="line">bt 		查看函数调用栈</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+	<div> 
+	 
+	<div> 
+ 
+<div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div> 
+ 
+</div>
+
+ 
+	 
+	</div>
+	
+	<div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/10/04/Linxu-常用工具/">Linxu_常用工具</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 李煜哲 的个人博客">李煜哲</a></p>
+  <p><span>发布时间:</span>2018年10月04日 - 21:10</p>
+  <p><span>最后更新:</span>2018年10月04日 - 21:10</p>
+  <p><span>原始链接:</span><a href="/2018/10/04/Linxu-常用工具/" title="Linxu_常用工具">http://yoursite.com/2018/10/04/Linxu-常用工具/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2018/10/04/Linxu-常用工具/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+
+      
+	</div>
+	
+	<div>
+    
+	</div>
+	
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/28/Linux-基础命令/" rel="next" title="Linux_基础命令">
+                <i class="fa fa-chevron-left"></i> Linux_基础命令
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/lyz.jpg"
+                alt="李煜哲" />
+            
+              <p class="site-author-name" itemprop="name">李煜哲</p>
+              <p class="site-description motion-element" itemprop="description">十年生死两茫茫，写程序，到天亮。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/sveter" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux下的常用工具"><span class="nav-number">1.</span> <span class="nav-text">Linux下的常用工具</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#编辑器"><span class="nav-number">1.1.</span> <span class="nav-text">编辑器</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#vim的基本概念"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">vim的基本概念</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#vim操作"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">vim操作</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译器"><span class="nav-number">1.2.</span> <span class="nav-text">编译器</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#gcc"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">gcc</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#程序的编译过程"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">程序的编译过程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">1.3.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#yum"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">yum</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#rpm"><span class="nav-number">1.3.0.2.</span> <span class="nav-text">rpm</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#源码安装"><span class="nav-number">1.3.0.3.</span> <span class="nav-text">源码安装</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#makefile"><span class="nav-number">1.4.</span> <span class="nav-text">makefile</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gdb使用"><span class="nav-number">1.5.</span> <span class="nav-text">gdb使用</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">李煜哲</span>
+
+  
+</div>
+
+
+
+  <div class="powered-by">  个人专属</div>
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">博客 - Lyz | 
+  </div>
+
+
+
+<div class="theme-info"> 
+<div class="powered-by"></div> 
+<span class="post-count">  博客全站共7.3k字</span> 
+</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("teOifuoWoc0CteORxq2ltX8v-gzGzoHsz", "3fVV4y8U8y1vsXpDLakL18m0");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+  
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
+<!-- 页面点击小红心 --> 
+<script type="text/javascript" src="/js/src/love.js"></script>
