@@ -90,7 +90,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, Lyz" />
+  <meta name="keywords" content="LeetCode," />
 
 
 
@@ -103,16 +103,18 @@
 
 
 
-<meta name="description" content="十年生死两茫茫，写程序，到天亮。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="LYZ">
-<meta property="og:url" content="http://yoursite.com/archives/2018/11/index.html">
+<meta name="description" content="leetcode:443.压缩字符串给定一组字符，使用原地算法将其压缩。 压缩后的长度必须始终小于或等于原数组长度。 数组的每个元素应该是长度为1 的字符（不是 int 整数类型）。 在完成原地修改输入数组后，返回数组的新长度。 进阶：你能否仅使用O(1) 空间解决问题？ 示例 1： 输入：[“a”,”a”,”b”,”b”,”c”,”c”,”c”] 输出：返回6，输入数组的前6个字符应该是：[“">
+<meta name="keywords" content="LeetCode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="压缩字符串">
+<meta property="og:url" content="http://yoursite.com/2018/12/01/压缩字符串/index.html">
 <meta property="og:site_name" content="LYZ">
-<meta property="og:description" content="十年生死两茫茫，写程序，到天亮。">
+<meta property="og:description" content="leetcode:443.压缩字符串给定一组字符，使用原地算法将其压缩。 压缩后的长度必须始终小于或等于原数组长度。 数组的每个元素应该是长度为1 的字符（不是 int 整数类型）。 在完成原地修改输入数组后，返回数组的新长度。 进阶：你能否仅使用O(1) 空间解决问题？ 示例 1： 输入：[“a”,”a”,”b”,”b”,”c”,”c”,”c”] 输出：返回6，输入数组的前6个字符应该是：[“">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-01T09:50:14.772Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LYZ">
-<meta name="twitter:description" content="十年生死两茫茫，写程序，到天亮。">
+<meta name="twitter:title" content="压缩字符串">
+<meta name="twitter:description" content="leetcode:443.压缩字符串给定一组字符，使用原地算法将其压缩。 压缩后的长度必须始终小于或等于原数组长度。 数组的每个元素应该是长度为1 的字符（不是 int 整数类型）。 在完成原地修改输入数组后，返回数组的新长度。 进阶：你能否仅使用O(1) 空间解决问题？ 示例 1： 输入：[“a”,”a”,”b”,”b”,”c”,”c”,”c”] 输出：返回6，输入数组的前6个字符应该是：[“">
 
 
 
@@ -142,13 +144,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2018/11/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/12/01/压缩字符串/"/>
 
 
 
 
 
-  <title>归档 | LYZ</title>
+  <title>压缩字符串 | LYZ</title>
   
 
 
@@ -167,7 +169,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 	<a href="https://sveter.github.io/">
 	<img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png" alt="Fork me on GitHub">
@@ -317,74 +319,316 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 6 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/01/压缩字符串/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李煜哲">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/lyz.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LYZ">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/11/24/Linux-进程概念/" itemprop="url">
-              
-                <span itemprop="name">Linux_进程概念</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">压缩字符串</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-24T22:11:52+08:00"
-              content="2018-11-24" >
-          11-24
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-01T17:48:14+08:00">
+                2018-12-01
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/12/01/压缩字符串/" class="leancloud_visitors" data-flag-title="压缩字符串">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  486
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <a id="more"></a>
+<h5 id="leetcode-443-压缩字符串"><a href="#leetcode-443-压缩字符串" class="headerlink" title="leetcode:443.压缩字符串"></a>leetcode:443.压缩字符串</h5><p>给定一组字符，使用原地算法将其压缩。</p>
+<p>压缩后的长度必须始终小于或等于原数组长度。</p>
+<p>数组的每个元素应该是长度为1 的字符（不是 int 整数类型）。</p>
+<p>在完成原地修改输入数组后，返回数组的新长度。</p>
+<p>进阶：<br>你能否仅使用O(1) 空间解决问题？</p>
+<h6 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a>示例 1：</h6><blockquote>
+<p>输入：<br>[“a”,”a”,”b”,”b”,”c”,”c”,”c”]</p>
+<p>输出：<br>返回6，输入数组的前6个字符应该是：[“a”,”2”,”b”,”2”,”c”,”3”]</p>
+<p>说明：<br>“aa”被”a2”替代。”bb”被”b2”替代。”ccc”被”c3”替代。</p>
+</blockquote>
+<h6 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a>示例 2：</h6><blockquote>
+<p>输入：<br>[“a”]</p>
+<p>输出：<br>返回1，输入数组的前1个字符应该是：[“a”]</p>
+<p>说明：<br>没有任何字符串被替代。</p>
+</blockquote>
+<h6 id="示例-3："><a href="#示例-3：" class="headerlink" title="示例 3："></a>示例 3：</h6><blockquote>
+<p>输入：<br>[“a”,”b”,”b”,”b”,”b”,”b”,”b”,”b”,”b”,”b”,”b”,”b”,”b”]</p>
+<p>输出：<br>返回4，输入数组的前4个字符应该是：[“a”,”b”,”1”,”2”]。</p>
+<p>说明：<br>由于字符”a”不重复，所以不会被压缩。”bbbbbbbbbbbb”被“b12”替代。<br>注意每个数字在数组中都有它自己的位置。</p>
+</blockquote>
+<h6 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h6><pre><code>所有字符都有一个ASCII值在[35, 126]区间内。
+1 &lt;= len(chars) &lt;= 1000。
+</code></pre><blockquote>
+<p>思路：<br>用一个index作为输出指针，将字母计数后，再进行输入，使用to_string函数可以很方便地将整型的各数位分离。最后要删除尾巴，用erase即可。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">compress</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&amp; chars)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//如果只有一个字符，你就返回当前元素个数</span></span><br><span class="line">        <span class="keyword">if</span>(chars.size() &lt;= <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> chars.size();</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; chars.size(); i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">            chars[index++] = chars[i];</span><br><span class="line">            <span class="keyword">while</span>(i+<span class="number">1</span> &lt; chars.size() &amp;&amp; chars[i] == chars[i+<span class="number">1</span>])&#123;</span><br><span class="line">                count++;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">//判断count是否大于1</span></span><br><span class="line">            <span class="keyword">if</span>(count &gt; <span class="number">1</span>)&#123;</span><br><span class="line">                <span class="built_in">string</span> s = to_string(count);</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; s.size(); k++)&#123;</span><br><span class="line">                    chars[index++] = chars[k];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//原地压缩，将后边的数据擦除</span></span><br><span class="line">        chars.erase(chars.begin()+index,chars.end());</span><br><span class="line">        <span class="keyword">return</span> chars.size();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+	<div> 
+	 
+	<div> 
+ 
+<div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div> 
+ 
+</div>
+
+ 
+	 
+	</div>
+	
+	<div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/12/01/压缩字符串/">压缩字符串</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 李煜哲 的个人博客">李煜哲</a></p>
+  <p><span>发布时间:</span>2018年12月01日 - 17:12</p>
+  <p><span>最后更新:</span>2018年12月01日 - 17:12</p>
+  <p><span>原始链接:</span><a href="/2018/12/01/压缩字符串/" title="压缩字符串">http://yoursite.com/2018/12/01/压缩字符串/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2018/12/01/压缩字符串/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
 
 
       
+	</div>
+	
+	<div>
+    
+	</div>
+	
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>觉得好的话就打赏一下吧</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
 
-    </div>
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/We_Chat.png" alt="李煜哲 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/zhifubao.jpg" alt="李煜哲 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/LeetCode/" rel="tag"><i class="fa fa-tag"></i> LeetCode</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/24/Linux-进程概念/" rel="next" title="Linux_进程概念">
+                <i class="fa fa-chevron-left"></i> Linux_进程概念
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -392,6 +636,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -412,8 +660,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -518,6 +775,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#leetcode-443-压缩字符串"><span class="nav-number">1.</span> <span class="nav-text">leetcode:443.压缩字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#示例-1："><span class="nav-number">1.1.</span> <span class="nav-text">示例 1：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#示例-2："><span class="nav-number">1.2.</span> <span class="nav-text">示例 2：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#示例-3："><span class="nav-number">1.3.</span> <span class="nav-text">示例 3：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#注意："><span class="nav-number">1.4.</span> <span class="nav-text">注意：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -666,6 +939,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

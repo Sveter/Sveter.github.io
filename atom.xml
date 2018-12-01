@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-24T14:17:34.094Z</updated>
+  <updated>2018-12-01T09:50:14.772Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>压缩字符串</title>
+    <link href="http://yoursite.com/2018/12/01/%E5%8E%8B%E7%BC%A9%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>http://yoursite.com/2018/12/01/压缩字符串/</id>
+    <published>2018-12-01T09:48:14.000Z</published>
+    <updated>2018-12-01T09:50:14.772Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><h5 id="leetcode-443-压缩字符串"><a href="#leetcode-443-压缩字符串" class="headerlink" title="leetcode:443.压缩字符串"></a>leetcode:443.压缩字符串</h5><p>给定一组字符，使用原地算法将其压缩。</p><p>压缩后的长度必须始终小于或等于原数组长度。</p><p>数组的每个元素应该是长度为1 的字符（不是 int 整数类型）。</p><p>在完成原地修改输入数组后，返回数组的新长度。</p><p>进阶：<br>你能否仅使用O(1) 空间解决问题？</p><h6 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a>示例 1：</h6><blockquote><p>输入：<br>[“a”,”a”,”b”,”b”,”c”,”c”,”c”]</p><p>输出：<br>返回6，输入数组的前6个字符应该是：[“a”,”2”,”b”,”2”,”c”,”3”]</p><p>说明：<br>“aa”被”a2”替代。”bb”被”b2”替代。”ccc”被”c3”替代。</p></blockquote><h6 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a>示例 2：</h6><blockquote><p>输入：<br>[“a”]</p><p>输出：<br>返回1，输入数组的前1个字符应该是：[“a”]</p><p>说明：<br>没有任何字符串被替代。</p></blockquote><h6 id="示例-3："><a href="#示例-3：" class="headerlink" title="示例 3："></a>示例 3：</h6><blockquote><p>输入：<br>[“a”,”b”,”b”,”b”,”b”,”b”,”b”,”b”,”b”,”b”,”b”,”b”,”b”]</p><p>输出：<br>返回4，输入数组的前4个字符应该是：[“a”,”b”,”1”,”2”]。</p><p>说明：<br>由于字符”a”不重复，所以不会被压缩。”bbbbbbbbbbbb”被“b12”替代。<br>注意每个数字在数组中都有它自己的位置。</p></blockquote><h6 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h6><pre><code>所有字符都有一个ASCII值在[35, 126]区间内。1 &lt;= len(chars) &lt;= 1000。</code></pre><blockquote><p>思路：<br>用一个index作为输出指针，将字母计数后，再进行输入，使用to_string函数可以很方便地将整型的各数位分离。最后要删除尾巴，用erase即可。</p></blockquote><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">compress</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&amp; chars)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//如果只有一个字符，你就返回当前元素个数</span></span><br><span class="line">        <span class="keyword">if</span>(chars.size() &lt;= <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> chars.size();</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; chars.size(); i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">            chars[index++] = chars[i];</span><br><span class="line">            <span class="keyword">while</span>(i+<span class="number">1</span> &lt; chars.size() &amp;&amp; chars[i] == chars[i+<span class="number">1</span>])&#123;</span><br><span class="line">                count++;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">//判断count是否大于1</span></span><br><span class="line">            <span class="keyword">if</span>(count &gt; <span class="number">1</span>)&#123;</span><br><span class="line">                <span class="built_in">string</span> s = to_string(count);</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; s.size(); k++)&#123;</span><br><span class="line">                    chars[index++] = chars[k];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//原地压缩，将后边的数据擦除</span></span><br><span class="line">        chars.erase(chars.begin()+index,chars.end());</span><br><span class="line">        <span class="keyword">return</span> chars.size();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h5 id=&quot;leetcode-443-压缩字符串&quot;&gt;&lt;a href=&quot;#leetcode-443-压缩字符串&quot; class=&quot;headerlink&quot; title=&quot;leetcode:443.压缩字符串&quot;&gt;&lt;/a&gt;leetcode:443.压
+      
+    
+    </summary>
+    
+      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
+    
+    
+      <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux_进程概念</title>
