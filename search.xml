@@ -3,7 +3,13 @@
   <entry>
     <title><![CDATA[模拟实现简单的shell]]></title>
     <url>%2F2018%2F12%2F13%2F%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84shell%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[模拟实现一个简易的shell shell读取一行输入，建立一个新的进程，在这个进程中运行程序，并等待这个进程结束 过程分析 获取命令行 解析命令行 建立一个子进程(fork) 替换子进程(execvp) 父进程等待子进程退出(wait) 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657/* * 1. 写一个shell入口提示要输入信息 * 2. scanf接收一个输入信息 * 3. 创建子进程 * 4. 程序替换 */#include&lt;stdio.h&gt;#include&lt;unistd.h&gt;#include&lt;stdlib.h&gt;#include&lt;string.h&gt;int main()&#123; while(1)&#123; printf("minishell&gt; "); //清空标准输出流缓冲区 fflush(stdout); char cmd[1024] = &#123;0&#125;; //^\n：scanf本身是遇到空格就要获取一次，这样的话就无法获取 // 到一个完整的命令，因此‘%[^\n]’表示的是获取数据直到 // 遇到\n为止 //%*c：将缓冲区中的字符都取出来，但是不要它，直接丢掉 // 目的是为了将最后的\n从缓冲区取出来，防止陷入死循环 //scanf的返回值是成功读入的项数 if(scanf("%[^\n]%*c",cmd) != 1)&#123; getchar(); &#125; //解析获取到的命令 char *ptr = cmd; char *argv[32] = &#123;NULL&#125;; int argc = 0; argv[argc++] = ptr; while(*ptr != '\0')&#123; //int isspace(int c) //用于判断一个字符是否是:\t \n \r 空格 //解析一个字符串时候这里就是对空格的判断 if(isspace(*ptr))&#123; while(isspace(*ptr) &amp;&amp; (*ptr != '\0'))&#123; *ptr++ = '\0'; &#125; argv[argc++] = ptr; &#125; ptr++; &#125; if(fork() == 0)&#123; execvp(argv[0],argv); &#125; //需要等待的原因： //1. 避免产生僵尸子进程 //2. 是为了等待子进程运行完毕，让程序逻辑更加完善 wait(NULL); &#125; return 0;&#125; 效果展示]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Linux-进程控制]]></title>

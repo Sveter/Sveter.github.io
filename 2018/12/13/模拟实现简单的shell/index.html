@@ -90,7 +90,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, Lyz" />
+  <meta name="keywords" content="Linux," />
 
 
 
@@ -103,17 +103,21 @@
 
 
 
-<meta name="description" content="十年生死两茫茫，写程序，到天亮。">
+<meta name="description" content="模拟实现一个简易的shell shell读取一行输入，建立一个新的进程，在这个进程中运行程序，并等待这个进程结束   过程分析    获取命令行 解析命令行 建立一个子进程(fork) 替换子进程(execvp) 父进程等待子进程退出(wait)   1234567891011121314151617181920212223242526272829303132333435363738394041">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="模拟实现简单的shell">
 <meta property="og:url" content="http://yoursite.com/2018/12/13/模拟实现简单的shell/index.html">
 <meta property="og:site_name" content="LYZ">
-<meta property="og:description" content="十年生死两茫茫，写程序，到天亮。">
+<meta property="og:description" content="模拟实现一个简易的shell shell读取一行输入，建立一个新的进程，在这个进程中运行程序，并等待这个进程结束   过程分析    获取命令行 解析命令行 建立一个子进程(fork) 替换子进程(execvp) 父进程等待子进程退出(wait)   1234567891011121314151617181920212223242526272829303132333435363738394041">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-13T13:30:38.085Z">
+<meta property="og:image" content="http://yoursite.com/img/minishell/ls.png">
+<meta property="og:image" content="http://yoursite.com/img/minishell/cat.png">
+<meta property="og:updated_time" content="2018-12-13T13:38:24.338Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="模拟实现简单的shell">
-<meta name="twitter:description" content="十年生死两茫茫，写程序，到天亮。">
+<meta name="twitter:description" content="模拟实现一个简易的shell shell读取一行输入，建立一个新的进程，在这个进程中运行程序，并等待这个进程结束   过程分析    获取命令行 解析命令行 建立一个子进程(fork) 替换子进程(execvp) 父进程等待子进程退出(wait)   1234567891011121314151617181920212223242526272829303132333435363738394041">
+<meta name="twitter:image" content="http://yoursite.com/img/minishell/ls.png">
 
 
 
@@ -372,6 +376,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -404,7 +430,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  429
                 </span>
               
 
@@ -441,7 +467,29 @@
       
 
       
-        
+        <a id="more"></a>
+<h3 id="模拟实现一个简易的shell"><a href="#模拟实现一个简易的shell" class="headerlink" title="模拟实现一个简易的shell"></a>模拟实现一个简易的shell</h3><blockquote>
+<p>shell读取一行输入，建立一个新的进程，在这个进程中运行程序，并等待这个进程结束</p>
+</blockquote>
+<ul>
+<li>过程分析</li>
+</ul>
+<blockquote>
+<ol>
+<li>获取命令行</li>
+<li>解析命令行</li>
+<li>建立一个子进程(fork)</li>
+<li>替换子进程(execvp)</li>
+<li>父进程等待子进程退出(wait)</li>
+</ol>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 1. 写一个shell入口提示要输入信息</span></span><br><span class="line"><span class="comment"> * 2. scanf接收一个输入信息</span></span><br><span class="line"><span class="comment"> * 3. 创建子进程</span></span><br><span class="line"><span class="comment"> * 4. 程序替换</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"minishell&gt; "</span>);</span><br><span class="line">		<span class="comment">//清空标准输出流缓冲区</span></span><br><span class="line">		fflush(<span class="built_in">stdout</span>);</span><br><span class="line">		<span class="keyword">char</span> cmd[<span class="number">1024</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">		<span class="comment">//^\n：scanf本身是遇到空格就要获取一次，这样的话就无法获取</span></span><br><span class="line">        <span class="comment">//      到一个完整的命令，因此‘%[^\n]’表示的是获取数据直到</span></span><br><span class="line">        <span class="comment">//      遇到\n为止</span></span><br><span class="line">        <span class="comment">//%*c：将缓冲区中的字符都取出来，但是不要它，直接丢掉</span></span><br><span class="line">        <span class="comment">//      目的是为了将最后的\n从缓冲区取出来，防止陷入死循环</span></span><br><span class="line">		<span class="comment">//scanf的返回值是成功读入的项数</span></span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">scanf</span>(<span class="string">"%[^\n]%*c"</span>,cmd) != <span class="number">1</span>)&#123;</span><br><span class="line">			getchar();</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">//解析获取到的命令</span></span><br><span class="line">		<span class="keyword">char</span> *ptr = cmd;</span><br><span class="line">		<span class="keyword">char</span> *argv[<span class="number">32</span>] = &#123;<span class="literal">NULL</span>&#125;;</span><br><span class="line">		<span class="keyword">int</span> argc = <span class="number">0</span>;</span><br><span class="line">		argv[argc++] = ptr;</span><br><span class="line">		<span class="keyword">while</span>(*ptr != <span class="string">'\0'</span>)&#123;</span><br><span class="line">			<span class="comment">//int isspace(int c)</span></span><br><span class="line">			<span class="comment">//用于判断一个字符是否是:\t \n \r 空格 </span></span><br><span class="line">            <span class="comment">//解析一个字符串时候这里就是对空格的判断</span></span><br><span class="line">			<span class="keyword">if</span>(<span class="built_in">isspace</span>(*ptr))&#123;</span><br><span class="line">				<span class="keyword">while</span>(<span class="built_in">isspace</span>(*ptr) &amp;&amp; (*ptr != <span class="string">'\0'</span>))&#123;</span><br><span class="line">					*ptr++ = <span class="string">'\0'</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				argv[argc++] = ptr;</span><br><span class="line">			&#125;</span><br><span class="line">			ptr++;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(fork() == <span class="number">0</span>)&#123;</span><br><span class="line">			execvp(argv[<span class="number">0</span>],argv);</span><br><span class="line">		&#125;</span><br><span class="line">        <span class="comment">//需要等待的原因：</span></span><br><span class="line">        <span class="comment">//1. 避免产生僵尸子进程</span></span><br><span class="line">        <span class="comment">//2. 是为了等待子进程运行完毕，让程序逻辑更加完善</span></span><br><span class="line">		wait(<span class="literal">NULL</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>效果展示</li>
+</ul>
+<p><img src="/img/minishell/ls.png" alt="avater"></p>
+<p><img src="/img/minishell/cat.png" alt="avater"></p>
+
       
     </div>
     
@@ -463,6 +511,35 @@
 	<div>
       
         
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/12/13/模拟实现简单的shell/">模拟实现简单的shell</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 李煜哲 的个人博客">李煜哲</a></p>
+  <p><span>发布时间:</span>2018年12月13日 - 21:12</p>
+  <p><span>最后更新:</span>2018年12月13日 - 21:12</p>
+  <p><span>原始链接:</span><a href="/2018/12/13/模拟实现简单的shell/" title="模拟实现简单的shell">http://yoursite.com/2018/12/13/模拟实现简单的shell/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2018/12/13/模拟实现简单的shell/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
 
       
 	</div>
@@ -505,6 +582,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
+          
+        </div>
       
 
       
@@ -575,8 +658,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -682,6 +774,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#模拟实现一个简易的shell"><span class="nav-number">1.</span> <span class="nav-text">模拟实现一个简易的shell</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -722,7 +830,7 @@
 
 <div class="theme-info"> 
 <div class="powered-by"></div> 
-<span class="post-count">  博客全站共13.5k字</span> 
+<span class="post-count">  博客全站共14k字</span> 
 </div>
 
 
