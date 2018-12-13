@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-13T12:19:25.592Z</updated>
+  <updated>2018-12-13T13:30:38.085Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>模拟实现简单的shell</title>
+    <link href="http://yoursite.com/2018/12/13/%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84shell/"/>
+    <id>http://yoursite.com/2018/12/13/模拟实现简单的shell/</id>
+    <published>2018-12-13T13:30:37.000Z</published>
+    <updated>2018-12-13T13:30:38.085Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Linux-进程控制</title>
